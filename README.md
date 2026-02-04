@@ -37,6 +37,7 @@ npm run preview
 ## Credits
 - Step-by-step algorithms follow a standard beginner method.
 - Full-solve capability uses `cubejs`.
+- Built with assistance from OpenAI Codex.
 
 ## License
 Private project for avi-kaufman.com. All rights reserved.
