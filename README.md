@@ -35,7 +35,8 @@ npm run preview
 3. Use **Solve** for a complete solve from any state.
 
 ## Credits
-- Solver algorithms are based on **nneonneo**’s cube algorithms (via `cubejs`).
+- Step-by-step algorithms follow a standard beginner method.
+- Full-solve capability uses `cubejs`.
 
 ## License
 Private project for avi-kaufman.com. All rights reserved.
