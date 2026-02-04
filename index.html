@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rubik's Cube Trainer</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="brand-bar">
+        <a class="brand-link" href="https://avi-kaufman.com">avi-kaufman.com</a>
+      </div>
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">3D Practice Lab</p>
+          <h1>Rubik's Cube Trainer</h1>
+          <p class="subtitle">Shuffle, solve, and learn a beginner-friendly method with guided steps.</p>
+        </div>
+        <div class="status-pill" id="queue-status">Ready</div>
+      </header>
+      <main class="layout">
+        <section class="viewer">
+          <div id="canvas-wrap"></div>
+          <div class="controls">
+            <div class="control-block">
+              <div class="control-title">Face Turns</div>
+              <div class="move-grid">
+                <button data-move="U">U</button>
+                <button data-move="U'">U'</button>
+                <button data-move="D">D</button>
+                <button data-move="D'">D'</button>
+                <button data-move="L">L</button>
+                <button data-move="L'">L'</button>
+                <button data-move="R">R</button>
+                <button data-move="R'">R'</button>
+                <button data-move="F">F</button>
+                <button data-move="F'">F'</button>
+                <button data-move="B">B</button>
+                <button data-move="B'">B'</button>
+              </div>
+            </div>
+            <div class="control-block">
+              <div class="control-title">Actions</div>
+              <div class="action-row">
+                <button id="shuffle">Shuffle 25</button>
+                <button id="solve">Solve</button>
+                <button id="reset">Reset</button>
+                <button id="clear-queue">Clear Queue</button>
+              </div>
+            </div>
+          </div>
+          <div class="helper">
+            Drag to orbit the cube. Use the move buttons or keys (U, D, L, R, F, B). Hold Shift for prime moves. Solve uses a full algorithm.
+          </div>
+        </section>
+        <aside class="tutorial">
+          <div class="tutorial-card">
+            <div class="step-meta">
+              Step <span id="step-index">1</span> of <span id="step-total">7</span>
+            </div>
+            <h2 id="step-title"></h2>
+            <p id="step-goal"></p>
+            <div class="algo">
+              <div class="algo-label">Algorithm</div>
+              <div id="step-algorithm"></div>
+            </div>
+            <div class="algo-actions">
+              <button id="apply-algorithm">Apply Algorithm</button>
+              <button id="copy-algorithm">Copy Moves</button>
+            </div>
+            <div class="algo-note">
+              Tip: Apply Algorithm now uses a step-specific solver and will advance when the step is done.
+            </div>
+            <div class="step-nav">
+              <button id="prev-step">Prev</button>
+              <button id="next-step">Next</button>
+            </div>
+            <div class="notation">
+              <div class="notation-title">Notation Cheat Sheet</div>
+              <ul>
+                <li>U, D, L, R, F, B = turn that face clockwise.</li>
+                <li>Use a prime (') for counterclockwise.</li>
+                <li>Add 2 for a 180 degree turn (example: R2).</li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
